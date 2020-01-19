@@ -174,9 +174,9 @@
         </h1>
         <div class="content">
             <p>不得已，又重新复习了下怎么搭建实验室的caffe环境，脑子不好使，还是要把句句话记下来啊喂~ </p>
-<h4 id="安装matlab"><a href="#安装matlab" class="headerlink" title="安装matlab"></a><strong>安装matlab</strong></h4><p>先要安装vs2013，有需要的也可以顺带把matlab安上，按完matlab要记得配环境啊~</p>
-<p>Path中添加：</p>
+<h4 id="安装matlab"><a href="#安装matlab" class="headerlink" title="安装matlab"></a><strong>安装matlab</strong></h4><p>先要安装vs2013，有需要的也可以顺带把matlab安上，按完matlab要记得配环境啊~<br>Path中添加：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D:\Program Files\MATLAB\R2016b\runtime\win64</span><br><span class="line">D:\Program Files\MATLAB\R2016b\bin</span><br><span class="line">D:\Program Files\MATLAB\R2016b\polyspace\bin</span><br></pre></td></tr></table></figure>
+
 
 <h4 id="下载cuda并安装"><a href="#下载cuda并安装" class="headerlink" title="下载cuda并安装"></a><strong>下载cuda并安装</strong></h4><p>在安装cuda之前先要安装驱动，这里是英伟达960~</p>
 <p>下载地址: <a href="http://www.nvidia.cn/Download/index.aspx?lang=cn">http://www.nvidia.cn/Download/index.aspx?lang=cn</a></p>
@@ -185,7 +185,9 @@
 <p>在安装cuda的时候，可能会遇到安装失败的问题，说你一堆东西没安装，其实安装驱动的时候已经安装过了，这里为什么这样提示我也不知道~ 安装时选择自定义安装，然后只勾选CUDA选项进行安装就好了，实际上也只需要CUDA~</p>
 <h4 id="安装miniconda2"><a href="#安装miniconda2" class="headerlink" title="安装miniconda2"></a><strong>安装miniconda2</strong></h4><p>下载地址： <a href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a></p>
 <p>安装后，配环境~ 在Path中添加：</p>
-<p>C:\ProgramData\miniconda2<br>C:\ProgramData\miniconda2\Scripts<br>C:\ProgramData\miniconda2\Library\bin</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\miniconda2</span><br><span class="line">C:\ProgramData\miniconda2\Scripts</span><br><span class="line">C:\ProgramData\miniconda2\Library\bin</span><br></pre></td></tr></table></figure>
+
+
 <h4 id="跑跑项目试试"><a href="#跑跑项目试试" class="headerlink" title="跑跑项目试试"></a><strong>跑跑项目试试</strong></h4><p>打开/caffe-windows/windows下的caffe.sln</p>
 <p>在跑项目前，更改/caffe-windows/windows下的CommonSettings文件中的相关配置，如CUDA的版本号，cudann的路径，miniconda的路径，matlab路径等</p>
 <p>跑跑项目没什么问题，就继续往下走~</p>
@@ -193,7 +195,8 @@
 <p>打开项目test，根据项目中引用的包，安装依赖包</p>
 <p>记得把caffe包放在项目目录下~ 或是设置路径</p>
 <p>安装到graphviz时，记得配环境~ Path添加：</p>
-<p>C:\ProgramData\Miniconda2\Library\bin\graphviz</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\Miniconda2\Library\bin\graphviz</span><br></pre></td></tr></table></figure>
+
 <p>所有包安好后，跑一下，没问题就大功告成啦~</p>
 
         </div>
