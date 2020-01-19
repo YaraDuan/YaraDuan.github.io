@@ -26,7 +26,7 @@
 
 
 
-<link rel="icon" href="/images/ice-cream.svg">
+<link rel="icon" href="/images/ice-cream.ico">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -136,6 +136,62 @@
         </nav>
     </div>
 </div>
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2017/05/31/bug-in-fcn/" class="image is-7by1">
+            <img class="thumbnail" src="/./2017/05/31/bug-in-fcn/banner.jpg" alt="FCN for semantic-image-segmentation task中踩的坑">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2017-05-31T05:12:43.000Z">2017-05-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/caffe/">caffe</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 183 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2017/05/31/bug-in-fcn/">FCN for semantic-image-segmentation task中踩的坑</a>
+            
+        </h1>
+        <div class="content">
+            <p>最近在用FCN做一些分割任务，在跑已有demo的过程中就出现了很多坑了，虽然初识FCN，但还是要勇敢将坑踩下去。希望这篇blog更完的时候，我能有更大的进步<del>~</del></p>
+<h4 id="训练过程中出现shape不匹配"><a href="#训练过程中出现shape不匹配" class="headerlink" title="训练过程中出现shape不匹配"></a><strong>训练过程中出现shape不匹配</strong></h4><p>开始使用voc-fcn-alexnet进行训练，训练过程中报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F0531 21:29:22.348371  6780 net.cpp:765] Cannot copy param 0 weights from layer ‘fc6’; shape mismatch.  Source param shape is 4096 256 6 6 (37748736); target param shape is 4096 512 7 7 (102760448). To learn this layer’s parameters from scratch rather than copying from a saved net, rename the layer.</span><br></pre></td></tr></table></figure>
+
+<p>是因为pre-trained的参数数量和训练的alexnet-FCN参数数量不匹配，应用surgery.transplant函数把两个网格的参数统一起来。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
 
     
 <div class="card">
@@ -258,7 +314,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            2
+                            4
                         </p>
                     </a>
                 </div>
@@ -266,11 +322,11 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Category
+                        Categories
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            1
+                            2
                         </p>
                     </a>
                 </div>
@@ -282,7 +338,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            2
+                            4
                         </p>
                     </a>
                 </div>
@@ -349,12 +405,12 @@
         <ul class="menu-list">
         
             <li>
-                <a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener">
+                <a class="level is-mobile" href="https://github.com/yaraduan" target="_blank" rel="noopener">
                     <span class="level-left">
-                        <span class="level-item">Hexo</span>
+                        <span class="level-item">Yara&#39;s Github</span>
                     </span>
                     <span class="level-right">
-                        <span class="level-item tag">hexo.io</span>
+                        <span class="level-item tag">github.com</span>
                     </span>
                 </a>
             </li>
@@ -362,7 +418,7 @@
             <li>
                 <a class="level is-mobile" href="https://github.com/yaraduan" target="_blank" rel="noopener">
                     <span class="level-left">
-                        <span class="level-item">PPOffice</span>
+                        <span class="level-item">HomePage</span>
                     </span>
                     <span class="level-right">
                         <span class="level-item tag">github.com</span>
@@ -390,6 +446,14 @@
                 <span class="level-item">caffe</span>
             </span>
             <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/paper/">
+            <span class="level-start">
+                <span class="level-item">paper</span>
+            </span>
+            <span class="level-end">
                 <span class="level-item tag">1</span>
             </span>
         </a></li>
@@ -403,7 +467,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/%E7%BB%99%E8%84%91%E5%AD%90%E4%B8%8D%E5%A5%BD%E7%9A%84%E6%88%91%E7%95%99%E7%9A%84%E7%89%B9%E5%88%AB%E5%85%B3%E6%80%80/" style="font-size: 10px;">给脑子不好的我留的特别关怀</a> <a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 10px;">闲聊</a>
+        <a href="/tags/%E5%9B%BE%E8%B1%A1%E5%88%86%E5%89%B2/" style="font-size: 10px;">图象分割</a> <a href="/tags/%E7%BB%86%E7%B2%92%E5%BA%A6%E5%88%86%E7%B1%BB/" style="font-size: 10px;">细粒度分类</a> <a href="/tags/%E7%BB%99%E8%84%91%E5%AD%90%E4%B8%8D%E5%A5%BD%E7%9A%84%E6%88%91%E7%95%99%E7%9A%84%E7%89%B9%E5%88%AB%E5%85%B3%E6%80%80/" style="font-size: 10px;">给脑子不好的我留的特别关怀</a> <a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 10px;">闲聊</a>
     </div>
 </div>
     
@@ -415,6 +479,44 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2018/07/11/paper-of-finegrained-classification/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/./2018/07/11/paper-of-finegrained-classification/banner.jpg" alt="细分类近几年顶会文章">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-07-10T21:08:15.000Z">2018-07-11</time></div>
+                    <a href="/2018/07/11/paper-of-finegrained-classification/" class="title has-link-black-ter is-size-6 has-text-weight-normal">细分类近几年顶会文章</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/paper/">paper</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/05/31/bug-in-fcn/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/./2017/05/31/bug-in-fcn/banner.jpg" alt="FCN for semantic-image-segmentation task中踩的坑">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-05-31T05:12:43.000Z">2017-05-31</time></div>
+                    <a href="/2017/05/31/bug-in-fcn/" class="title has-link-black-ter is-size-6 has-text-weight-normal">FCN for semantic-image-segmentation task中踩的坑</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/caffe/">caffe</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -466,6 +568,28 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2017/04/">
                 <span class="level-start">
                     <span class="level-item">April 2017</span>
@@ -499,6 +623,20 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%9B%BE%E8%B1%A1%E5%88%86%E5%89%B2/">
+                        <span class="tag">图象分割</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E7%BB%86%E7%B2%92%E5%BA%A6%E5%88%86%E7%B1%BB/">
+                        <span class="tag">细粒度分类</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%E7%BB%99%E8%84%91%E5%AD%90%E4%B8%8D%E5%A5%BD%E7%9A%84%E6%88%91%E7%95%99%E7%9A%84%E7%89%B9%E5%88%AB%E5%85%B3%E6%80%80/">
@@ -538,6 +676,44 @@
         
         <article class="media">
             
+            <a href="/2018/07/11/paper-of-finegrained-classification/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/./2018/07/11/paper-of-finegrained-classification/banner.jpg" alt="细分类近几年顶会文章">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-07-10T21:08:15.000Z">2018-07-11</time></div>
+                    <a href="/2018/07/11/paper-of-finegrained-classification/" class="title has-link-black-ter is-size-6 has-text-weight-normal">细分类近几年顶会文章</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/paper/">paper</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2017/05/31/bug-in-fcn/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/./2017/05/31/bug-in-fcn/banner.jpg" alt="FCN for semantic-image-segmentation task中踩的坑">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2017-05-31T05:12:43.000Z">2017-05-31</time></div>
+                    <a href="/2017/05/31/bug-in-fcn/" class="title has-link-black-ter is-size-6 has-text-weight-normal">FCN for semantic-image-segmentation task中踩的坑</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/caffe/">caffe</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2017/04/09/win10-vs2013-cuda-%E5%AE%9E%E9%AA%8C%E5%AE%A4caffe%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/./2017/04/09/win10-vs2013-cuda-%E5%AE%9E%E9%AA%8C%E5%AE%A4caffe%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/banner.jpeg" alt="win10+vs2013+cuda 实验室caffe环境搭建">
@@ -586,6 +762,28 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2018/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2017/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2017</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2017/04/">
                 <span class="level-start">
                     <span class="level-item">April 2017</span>
@@ -619,6 +817,20 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%9B%BE%E8%B1%A1%E5%88%86%E5%89%B2/">
+                        <span class="tag">图象分割</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E7%BB%86%E7%B2%92%E5%BA%A6%E5%88%86%E7%B1%BB/">
+                        <span class="tag">细粒度分类</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/%E7%BB%99%E8%84%91%E5%AD%90%E4%B8%8D%E5%A5%BD%E7%9A%84%E6%88%91%E7%95%99%E7%9A%84%E7%89%B9%E5%88%AB%E5%85%B3%E6%80%80/">
