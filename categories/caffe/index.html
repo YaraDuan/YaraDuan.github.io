@@ -7,20 +7,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Categories - Yara</title>
+<title>Category: caffe - Yara</title>
 
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="Yara">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:url" content="http://yoursite.com/categories/caffe/index.html">
 <meta property="og:site_name" content="Yara">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
 <meta property="article:author" content="Yara Duan">
-<meta property="article:tag" content="闲聊">
-<meta property="article:tag" content="图象分割">
-<meta property="article:tag" content="细粒度分类">
-<meta property="article:tag" content="给脑子不好的我留的特别关怀">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
@@ -94,7 +90,7 @@
                 <a class="navbar-item"
                 href="/archives">Archives</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">Categories</a>
                 
                 <a class="navbar-item"
@@ -129,35 +125,151 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Categories
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/caffe/">
-            <span class="level-start">
-                <span class="level-item">caffe</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/paper/">
-            <span class="level-start">
-                <span class="level-item">paper</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
-        </div>
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">Categories</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">caffe</a></li>
+        </ul>
+        </nav>
     </div>
-</div></div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2017/05/31/bug-in-fcn/" class="image is-7by1">
+            <img class="thumbnail" src="/./2017/05/31/bug-in-fcn/banner.jpg" alt="FCN for semantic-image-segmentation task中踩的坑">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2017-05-31T05:12:43.000Z">2017-05-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/caffe/">caffe</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 183 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2017/05/31/bug-in-fcn/">FCN for semantic-image-segmentation task中踩的坑</a>
+            
+        </h1>
+        <div class="content">
+            <p>最近在用FCN做一些分割任务，在跑已有demo的过程中就出现了很多坑了，虽然初识FCN，但还是要勇敢将坑踩下去。希望这篇blog更完的时候，我能有更大的进步<del>~</del></p>
+<h4 id="训练过程中出现shape不匹配"><a href="#训练过程中出现shape不匹配" class="headerlink" title="训练过程中出现shape不匹配"></a><strong>训练过程中出现shape不匹配</strong></h4><p>开始使用voc-fcn-alexnet进行训练，训练过程中报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F0531 21:29:22.348371  6780 net.cpp:765] Cannot copy param 0 weights from layer ‘fc6’; shape mismatch.  Source param shape is 4096 256 6 6 (37748736); target param shape is 4096 512 7 7 (102760448). To learn this layer’s parameters from scratch rather than copying from a saved net, rename the layer.</span><br></pre></td></tr></table></figure>
+
+<p>是因为pre-trained的参数数量和训练的alexnet-FCN参数数量不匹配，应用surgery.transplant函数把两个网格的参数统一起来。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2017/04/09/win10-vs2013-cuda-%E5%AE%9E%E9%AA%8C%E5%AE%A4caffe%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="image is-7by1">
+            <img class="thumbnail" src="/./2017/04/09/win10-vs2013-cuda-%E5%AE%9E%E9%AA%8C%E5%AE%A4caffe%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/banner.jpeg" alt="win10+vs2013+cuda 实验室caffe环境搭建">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2017-04-09T06:24:36.000Z">2017-04-09</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/caffe/">caffe</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes read (About 503 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2017/04/09/win10-vs2013-cuda-%E5%AE%9E%E9%AA%8C%E5%AE%A4caffe%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">win10+vs2013+cuda 实验室caffe环境搭建</a>
+            
+        </h1>
+        <div class="content">
+            <p>不得已，又重新复习了下怎么搭建实验室的caffe环境，脑子不好使，还是要把句句话记下来啊喂~ </p>
+<h4 id="安装matlab"><a href="#安装matlab" class="headerlink" title="安装matlab"></a><strong>安装matlab</strong></h4><p>先要安装vs2013，有需要的也可以顺带把matlab安上，按完matlab要记得配环境啊~<br>Path中添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D:\Program Files\MATLAB\R2016b\runtime\win64</span><br><span class="line">D:\Program Files\MATLAB\R2016b\bin</span><br><span class="line">D:\Program Files\MATLAB\R2016b\polyspace\bin</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="下载cuda并安装"><a href="#下载cuda并安装" class="headerlink" title="下载cuda并安装"></a><strong>下载cuda并安装</strong></h4><p>在安装cuda之前先要安装驱动，这里是英伟达960~</p>
+<p>下载地址: <a href="http://www.nvidia.cn/Download/index.aspx?lang=cn">http://www.nvidia.cn/Download/index.aspx?lang=cn</a></p>
+<p>接下来就是安装cuda以及配置cuda环境，话不多说，参考这篇博客就好啦: <a href="http://blog.csdn.net/u011821462/article/details/50145221">http://blog.csdn.net/u011821462/article/details/50145221</a></p>
+<p>这篇文章写得十分详细，按照这个步骤来应该没什么问题哒~</p>
+<p>在安装cuda的时候，可能会遇到安装失败的问题，说你一堆东西没安装，其实安装驱动的时候已经安装过了，这里为什么这样提示我也不知道~ 安装时选择自定义安装，然后只勾选CUDA选项进行安装就好了，实际上也只需要CUDA~</p>
+<h4 id="安装miniconda2"><a href="#安装miniconda2" class="headerlink" title="安装miniconda2"></a><strong>安装miniconda2</strong></h4><p>下载地址： <a href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a></p>
+<p>安装后，配环境~ 在Path中添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\miniconda2</span><br><span class="line">C:\ProgramData\miniconda2\Scripts</span><br><span class="line">C:\ProgramData\miniconda2\Library\bin</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="跑跑项目试试"><a href="#跑跑项目试试" class="headerlink" title="跑跑项目试试"></a><strong>跑跑项目试试</strong></h4><p>打开/caffe-windows/windows下的caffe.sln</p>
+<p>在跑项目前，更改/caffe-windows/windows下的CommonSettings文件中的相关配置，如CUDA的版本号，cudann的路径，miniconda的路径，matlab路径等</p>
+<p>跑跑项目没什么问题，就继续往下走~</p>
+<p>打开vs，安装Python Tools for Visual Studio</p>
+<p>打开项目test，根据项目中引用的包，安装依赖包</p>
+<p>记得把caffe包放在项目目录下~ 或是设置路径</p>
+<p>安装到graphviz时，记得配环境~ Path添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\Miniconda2\Library\bin\graphviz</span><br></pre></td></tr></table></figure>
+
+<p>所有包安好后，跑一下，没问题就大功告成啦~</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
                 
 
 
