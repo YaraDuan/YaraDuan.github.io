@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 | Yao&#39;s Homepage</title>
-    <link>https://yaraduan.github.io/publication-type/2/</link>
-      <atom:link href="https://yaraduan.github.io/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://YaraDuan.github.io/publication-type/2/</link>
+      <atom:link href="https://YaraDuan.github.io/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Feb 2022 21:38:35 +0800</lastBuildDate>
     <image>
-      <url>https://yaraduan.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://YaraDuan.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
-      <link>https://yaraduan.github.io/publication-type/2/</link>
+      <link>https://YaraDuan.github.io/publication-type/2/</link>
     </image>
     
     <item>
       <title>ARM3D: Attention-based relation module for indoor 3D object detection</title>
-      <link>https://yaraduan.github.io/publication/arm3d/</link>
+      <link>https://YaraDuan.github.io/publication/arm3d/</link>
       <pubDate>Mon, 07 Feb 2022 21:38:35 +0800</pubDate>
-      <guid>https://yaraduan.github.io/publication/arm3d/</guid>
+      <guid>https://YaraDuan.github.io/publication/arm3d/</guid>
       <description></description>
     </item>
     
     <item>
       <title>3DRM: Pair-wise relation module for 3D object detection</title>
-      <link>https://yaraduan.github.io/publication/3drm/</link>
+      <link>https://YaraDuan.github.io/publication/3drm/</link>
       <pubDate>Wed, 07 Apr 2021 21:20:06 +0800</pubDate>
-      <guid>https://yaraduan.github.io/publication/3drm/</guid>
+      <guid>https://YaraDuan.github.io/publication/3drm/</guid>
       <description></description>
     </item>
     
